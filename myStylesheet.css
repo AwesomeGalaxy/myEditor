@@ -1,0 +1,764 @@
+ @media only screen and (min-width: 600px)
+{
+	 :root 
+	{
+		 /*min 600 px*/
+		 --main-left: 365px;
+		 --line-height: 18px;
+		 --font-size: 12px;
+		 --main-bottom: 5px;
+		 --main-bg: rgba(255, 255, 255, .9);
+		 --main-black: rgba(33, 31, 38, .9);
+	}
+	 *{
+	    /*min 600 px*/
+		box-sizing: border-box;
+		line-height: var(--line-height);
+		font-size: var(--font-size);
+		font-family: monospace;
+		font-size-adjust:12px;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	input, textarea
+	{
+		/*min 600 px*/
+		 -webkit-user-select: text;
+		 -ms-user-select: text;
+		 user-select: text;
+	}
+	 #sidebar 
+	{
+		/*min 600 px*/
+		padding-left:0px;
+		padding-right:0px;
+		top: 5px;
+		border-radius:16px;
+		bottom:5px;
+		position: absolute;
+		display: block;
+		left: calc(var(--main-left) - 345px);
+		width: 340px;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		height:calc(100vh - 10px);
+		min-height:calc(100vh - 290px);
+		background-color: whitesmoke;
+	}
+	 .side
+	{
+		 /*min 600 px*/
+		position:absolute;
+		width:calc(98% - 0px);
+		margin-left:1%;
+		margin-right:1%;
+		border:1px solid red;
+		padding:5px;
+		overflow:auto;
+		display:none;
+		top:75px;
+		bottom:230px;
+	}
+	body, html 
+	{
+		/*min 600 px*/
+		margin: 0px 0px 0px 0px;
+		border: black solid 0px;
+		padding: 2px 2px 2px 2px;
+		min-height: 400px !important;
+		min-width: 600px !important;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100vw;
+		max-height: 100vh;
+		overflow:hidden;
+		background-color: var(--main-black);
+		overflow: hidden;
+	}
+	 .ybar 
+	{
+		/*min 600 px*/
+		width: 100%;
+		height: 7px;
+		background-color: dodgerblue;
+		display: block;
+		position: relative;
+		top: -2px;
+		cursor: ns-resize;
+	}
+	 .xbar 
+	{
+		/*min 600 px*/
+		width: 3px;
+		height: 100%;
+		background-color: dodgerblue;
+		position: relative;
+		cursor: ew-resize;
+		float: right;
+	}
+	 #navbar 
+	{
+		/*min 600 px*/
+		height: 70px;
+		background-color: var(--main-black);
+		top:0px;
+		position:absolute;
+		left:0px;
+		width: 350px;
+		border: 3px solid dodgerblue;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+		text-align: center;
+		color: white;
+	}
+	 #docker
+	{
+		/*min 600 px*/
+		border-top: 3px smooth dodgerblue;
+		width: 350px;
+		height: 225px;
+		position:absolute;
+		display: inline-block;
+		padding: 5px 5px 5px 5px;
+		background-color: var(--main-black);
+		overflow: hidden;
+		border: 3px solid dodgerblue;
+		bottom:0px;
+	}
+	 #findbar, #replacementbar, #omnibox, #openfilename 
+	 {
+	 	/*min 600 px*/
+		width:100%;
+		height:1.5em;
+		padding:3px;
+		outline:none;
+		border:2px solid dodgerblue;
+		line-height:1.5em;
+		border-radius:10px;
+	}
+}
+
+ol>ol 
+{
+	margin-left: 20px;
+}
+ol, li
+{
+	margin-left: 05px;
+	padding-left: 0px;
+	cursor: pointer;
+}
+ #moredownarrowbutton
+{
+	position: fixed;
+	bottom: 5%;
+	height: 20px;
+	width: 50%;
+	background-color: brown;
+	z-index: 50;
+}
+ #poster 
+{
+	columns: 4;
+	overflow: scroll;
+	font-size: 20px;
+	line-height:24px;
+}
+li:hover 
+{
+	background-color: rgb(191, 184, 185);
+}
+li.selected 
+{
+	background-color: gray;
+	color: white;
+	cursor: pointer;
+}
+
+ol>li, li
+{
+	list-style-type: none;
+	margin-left: -6px;
+}
+ #scriptTagInnerText 
+{
+	width: 100%;
+}
+ #scriptTagInner
+{
+	width: 200px;
+	height: 7em;
+	resize: vertical;
+	margin-left: 5px;
+}
+textarea, [type='text'] 
+{
+	background-color: whitesmoke;
+}
+ #tooltip
+{
+	word-break: break-all;
+}
+ #editor
+{
+	tab-size: 4;
+	 -moz-tab-size: 4;
+	position: absolute;
+	min-width: calc(100% - 45px);
+	width: calc(100% - 45px);
+	max-width: calc(100% - 45px);
+	min-height: 100%;
+	height: 100%;
+	max-height: 100%;
+	resize: none;
+	overflow: auto;
+	box-sizing: border-box;
+	line-height: var(--line-height);
+	font-size: var(--font-size);
+}
+ #gutter
+{
+	width: 45px !important;
+	height: 100% !important;
+	line-height: var(--line-height);
+	font-size: var(--font-size);
+	margin: 0px 0px;
+	resize: none;
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+	left: 0px;
+	text-align: right;
+	cursor: pointer;
+}
+ #container
+{
+	box-sizing:border-box;
+	height:calc(100vh - 20px);
+	position: absolute;
+	display: block;
+	width: 745px;
+	top: 20px;
+	left: calc(var(--main-left) + 15px);
+	bottom: 5px;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	border: 3px dodgerblue solid;
+	border-top:none;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+}
+ .stage:focus 
+{
+	outline: none;
+}
+ .stage:active 
+{
+	outline: none;
+}
+ .selected 
+{
+	display: block !important;
+}
+ .active
+{
+	display: block !important;
+	background-color: white;
+}
+
+ #toolbar>button 
+{
+	margin: 3px 3px 3px 3px;
+	min-width:30px;
+}
+#toolbar:hover, #toolbar.show
+{
+	top: 0px;
+	transition-origin:0& 50%;
+	transform: rotateX(0deg);
+	border-bottom-width:3px;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+}
+#toolbar
+{
+	cursor: pointer;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	height: 80px;
+	position: absolute;
+	display: inline-block;
+	width: 745px;
+	left: calc(var(--main-left) + 15px);
+	top: -60px;
+	background-color: var(--main-black);
+	overflow: hidden;
+	z-index: 50;
+	box-sizing: border-box;
+	border: 3px groove dodgerblue;
+
+	border-bottom-width:20px;
+	backface-visibility:hidden;
+	transition-origin:top center;
+	transform: rotateX(0deg);
+	transition-timing-function:ease-out;
+	trasition-direction: forward; 
+	transition-iteration-count:1;
+	transition-delay: 0s;
+	transition-duration: .8s;
+	transition-origin: 0& 50%;
+	transition property: top;
+	
+}
+ #openfilename,
+ #omnibox
+{
+	width: 29em;
+	margin-left: 3px;
+}
+ #cmd>input[type='text'] 
+{
+	width: 90%;
+}
+ #poster
+{
+	border: 3px solid green;
+	background-color: lightblue;
+	position: fixed;
+	left: 5%;
+	right: 5%;
+	top: 5%;
+	bottom: 5%;
+}
+th>button, th>input[type='button']
+{
+	padding: 3px;
+	border-radius: 2px;
+	box-shadow: none;
+	border: none;
+	min-width: 100%;
+	max-width: 30px;
+	height: auto;
+	background-color: dodgerblue;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+}
+th 
+{
+	height: 2em;
+}
+b
+{
+	font-size: 1em;
+	height: 1em;
+	width: 1em;
+	float: left;
+}
+ #modal
+{
+	padding:50px;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: -50px;
+	right: 0px;
+	left: -50px;
+	bottom: 0px;
+	background-color: rgba(0, 0, 0, .2);
+	color: black;
+	text-align: center;
+	box-sizing:content-box;
+	z-index:100;
+	justify-content: center;
+	display:none;
+}
+body.modal>#modal
+{
+	display:inline-block;
+}
+table
+{
+	width: 95%;
+	height: auto;
+	table-layout: fixed;
+}
+ .schange
+{
+	width: 4em;
+	max-width: 4em;
+	min-width: 4em;
+	inline-size: 4em;
+	max-inline-size: 4em;
+	min-inline-size: 4em;
+}
+ .codemode
+{
+	background-color: black;
+	color: #2bff00;
+	font-stretch: expanded;
+	line-height: var(--line-height);
+	font-size: var(--font-size);
+	font-weight: 900;
+	letter-spacing: 1px;
+	font-smooth: antialiased;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+}
+ .hidden 
+{
+	display: none !important;
+}
+#favicon::before {
+  content: "♥";
+}
+button, [type='button']
+{
+	padding: 3px;
+	border-radius: 2px;
+	box-shadow: none;
+	border: none;
+	height: auto;
+	background-color: dodgerblue;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-variant:small-caps slashed-zero;
+}
+ .folder::before 
+{
+	content: "\01F4C1";
+}
+ .open::before /*no mq px*/
+{
+	content: "\01F4C2" !important;
+}
+ .file::before /*no mq px*/
+{
+	content: "\01F4C4" !important;
+}
+li>a
+{	/*no mq px*/
+	color: white;
+	cursor: pointer;
+}
+ #contextmenu
+{
+	/*no mq px*/
+	z-index: 100;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	line-height: 16px;
+	font-size: 14px;
+	border-radius: 15px;
+	color: white;
+	background-color: rgba(33, 31, 38, .9);
+}
+
+progress
+{
+	/*no mq */
+	width: 100px;
+}
+
+ #mclose
+{
+	/* no mq */
+	margin: 0px 0px 0px 0px;
+	padding: 10px 10px 10px 10px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	max-width: 50px;
+	max-height: 50px;
+	font-size: 50px;
+	line-height: 50px;
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	justify-content: center;
+}
+ #splitscreen
+{	/* no mq */
+	width: 7px;
+	background-color: dodgerblue;
+	top: 10px;
+	bottom: 10px;
+	left: var(--main-left);
+	position: absolute;
+	cursor: ew-resize;
+}
+ #board
+{	/* no mq */
+	width: 80%;
+	height: 90%;
+}
+main 
+{
+	/* no mq */
+	min-width: 110vw;
+	min-height: 110vh;
+	margin: 0px 0px 0px 0px;
+	left: 0px;
+	top: 0px;
+	width: 110vw;
+	height: 110vh;
+	overflow: hidden;
+}
+
+
+#frbox
+{
+	/* no mq */
+	width: 320px;
+	height: 120px;
+	position: fixed;
+	right: 100px;
+	bottom: 0px;
+	overflow: hidden;
+	z-index:50;
+	background-color:var(--main-black);
+}
+#frbox>table /* no mq */
+{
+	width: 100%;
+	height: 100%;
+}
+ #toasthead
+{	/* no mq */
+	margin:0px 0px 0px 0px;
+	text-align: center;
+	box-sizing:border-box;
+	color: #fff;
+
+}
+ #toastmsg
+{	/* no mq */
+	 color: #fff;
+	margin:0px 0px 0px 0px;
+	white-space: nowrap;
+	width: auto;
+	height: 49%;
+	box-sizing: border-box;
+}
+ .toast
+{	/* no mq */
+	min-width: 100px;
+	height: 4.5em;
+	color: #fff;
+	border-radius: 2px;
+	position: fixed;
+	z-index: 100;
+	right:50px;
+	top:50px;
+	display:inline-block;
+	margin:0px 0px 0px 0px;
+	padding:5px;
+	text-align: center;
+	background-color: black;
+	animation-name: hitcorners;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+  @keyframes fadein /* no mq */
+{
+	from 
+	{
+		opacity: 0;
+	}
+	to 
+	{
+		opacity: 1;
+	}
+}
+ @keyframes fadeout /* no mq */
+{
+	from 
+	{
+		opacity: 1;
+	}
+	to 
+	{
+		opacity: 0;
+	}
+}
+  @keyframes hitcorners /* no mq */
+{
+	0%
+	{
+		opacity:0;
+		top: unset;
+		right: 10px;
+		left:unset;
+		bottom:100%;
+	}
+	15%
+	{
+		opacity:1;
+		top: unset;
+		right: 10px;
+		left:unset;
+		bottom:90%;
+	}
+	 85%
+	{
+		opacity:1;
+		top: unset;
+		right: 10px;
+		left:unset;
+		bottom:10%;
+	}
+	90%
+	{
+		opacity:0;
+		top: unset;
+		right: 10px;
+		left:unset;
+		bottom:50%;
+	}
+	100%
+	{
+		opacity:0;
+		top: unset;
+		right: 10px;
+		left:unset;
+		bottom:50%;
+	}
+}
+footer[data-status='1']
+{
+	height: 225px !important;
+}
+footer[data-status='2']
+{
+	height: 90% !important;
+}
+@media only screen and (max-width: 600px)
+{
+	 :root /* max 600px */
+	{
+		 --main-left: Calc(0px);
+		 --line-height: 18px;
+		 --font-size: 12px;
+		 --main-bottom: 5px;
+		 --main-bg: rgba(255, 255, 255, .9);
+		 --main-black: rgba(33, 31, 38, .9);
+	}
+	 *
+	{
+		 /*max 600px*/
+		box-sizing: border-box;
+		font-family: monospace;
+	}
+	 #sidebar
+	{
+		/*max 600 px*/
+		padding-left:0px;
+		padding-right:0px;
+		top: 5px;
+		border-radius:16px;
+		bottom:5px;
+		position: absolute;
+		display: block;
+		right:var(--main-left);
+		width: 350px;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		height:calc(100vh - 10px);
+		min-height:calc(100vh - 290px);
+		background-color: whitesmoke;
+	}
+	 .side
+	{
+		 /*max 600 px*/
+		position:absolute;
+		width:100%;
+		border:1px solid red;
+		padding:5px;
+		overflow:auto;
+		display:none;
+		top:75px;
+		bottom:230px;
+	}
+	body, html/*max 600 px*/
+	{
+		margin: 0px 0px 0px 0px;
+		border: black solid 0px;
+		padding: 2px 2px 2px 2px;
+		min-height: 400px !important;
+		min-width: 600px !important;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100vw;
+		max-height: 100vh;
+		overflow:hidden;
+		background-color: var(--main-black);
+		overflow: hidden;
+	}
+	 .ybar /*max 600 px*/
+	{
+		width: 100%;
+		height: 7px;
+		background-color: dodgerblue;
+		display: block;
+		position: relative;
+		top: -2px;
+		cursor: ns-resize;
+	}
+	 .xbar /*max 600 px*/
+	{
+		width: 3px;
+		height: 100%;
+		background-color: dodgerblue;
+		position: relative;
+		cursor: ew-resize;
+		float: right;
+	}
+	 #navbar 
+	{
+		/*max 600 px*/
+		height: 70px;
+		background-color: var(--main-black);
+		top:0px;
+		position:absolute;
+		left:0px;
+		width: 350px;
+		border: 3px solid dodgerblue;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+		text-align: center;
+		color: white;
+	}
+	 #docker 
+	{
+		/*max 600 px*/
+		border-top: 3px smooth dodgerblue;
+		width: 350px;
+		height: 225px;
+		position:absolute;
+		display: inline-block;
+		padding: 5px 5px 5px 5px;
+		background-color: var(--main-black);
+		overflow: hidden;
+		border: 3px solid dodgerblue;
+		bottom:0px;
+	}
+	 #findbar, #replacementbar
+	{
+		 /*max 600 px*/
+		width:100%;
+		height:1.5em;
+		padding:3px;
+		outline:none;
+		border:2px solid dodgerblue;
+		line-height:1.5em;
+		border-radius:10px;
+	}
+}
